@@ -1,27 +1,32 @@
 <?php
 
-  Class Conta(){
+  class Conta{
 
     public $numero;
-    public $saldo;
-    public $limite = 100
+    public $saldo = 0;
+    public $limite = 100;
 
     function depositaValor($valor){
-      $this->$saldo += $valor;
-      return $this->$saldo;
+      $this->saldo += $valor;
+      return $this->saldo;
     }
 
     function sacaValor($valor){
-      $this->$saldo -= $valor;
-      return $this->$saldo;
+      if($valor <= 100){
+        $this->saldo -= $valor;
+      } else {
+        echo "Passou do limite de saque";
+        return null;
+      }
+      return $this->saldo;
     }
 
     public function imprimeExtrato(){
-      echo $this->$saldo;
+      echo $this->saldo.PHP_EOL;
     }
 
     function consultaSaldoDisponivel(){
-      return $this->$saldo;
+      return $this->saldo;
     }
 
   }
