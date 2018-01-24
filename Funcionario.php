@@ -1,6 +1,6 @@
 <?php
 
-  Class Funciario{
+  Class Funcionario{
 
     public $nome;
     public $salario;
@@ -10,8 +10,8 @@
     }
 
      function consultaDados(){
-        echo $this->nome;
-        echo $this->salario;
+        echo $this->nome.PHP_EOL;
+        echo $this->salario.PHP_EOL;
 
         return $this;
      }

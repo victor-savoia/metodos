@@ -12,6 +12,8 @@
   echo $saldo.PHP_EOL;
 
   $funcionario = new Funcionario();
-  
+
+  $funcionario->aumentaSalario(30);
+  $funcionario->consultaDados();
 
 ?>
